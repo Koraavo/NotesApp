@@ -1,0 +1,438 @@
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"); */
+
+/* 
+slimen mami for the login/register page
+https://codepen.io/mamislimen/pen/jOwwLvy
+*/
+
+:root {
+    --login-button-clr: #573b8a;
+    --background:#ececec;
+    --card-background: #D34E24;
+    --background-login: rgb(255, 213, 0);
+    
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL STYLES */
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background);
+  font-size: 1.6rem;
+  
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(7, 25, 63);
+    text-transform: uppercase;
+}
+
+a:hover {
+  cursor: pointer;
+  filter: contrast(0.5);
+}
+
+/* Login and Signup */
+
+.body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+  background: var(--background-login);
+}
+
+.main{
+	width: 35rem;
+	height: 50rem;
+	background: red;
+	overflow: hidden;
+	background: var(--background-login);
+	border-radius: 10px;
+	box-shadow: .5em 2em 5em #000;
+}
+
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+
+.main input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.login-page-btn{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: var(--login-button-clr);
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+#chk{
+	display: none;
+}
+
+.signup p, .login p, .signup h4, .login h4 {
+    text-align: center;
+}
+
+.login h4, .signup h4 {
+    text-transform: uppercase;
+    color: orangered;
+    margin-top: 1em;
+    position: relative;
+    top: -6em;
+    
+}
+
+.main label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 6rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.login-page-btn:hover{
+	background: #6d44b8;
+}
+
+.login{
+	height: 46rem;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-18rem);
+	transition: .8s ease-in-out;
+}
+
+.login label{
+	color: var(--login-button-clr);
+	transform: scale(.6);
+}
+
+/* animation on clicking links */
+
+.main .login-now, 
+.main .register-now{
+	color: var(--login-button-clr);
+	font-size: 1em;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+    position: relative;
+    top: -5rem;
+}
+
+.login-now:hover,
+.register-now:hover {
+    cursor: pointer;
+    filter: contrast(0.5);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-50rem);
+}
+
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+
+/* global settings on the notes home page page */
+
+.notes-container {
+  margin-top: 3rem;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  font-size: clamp(1rem, 0.8983rem + 0.814vw, 1.875rem);
+  margin: 1em auto 2em;
+  background: var(--background);
+  padding: 1em;
+  width: 100%;
+
+}
+
+.page-header .logo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+  .date {
+    font-size: 1.4rem;
+    justify-content: flex-end;
+    text-align: right;
+    color: wheat;
+  }
+
+  
+  
+  .card .edit {
+    font-weight: 900;
+    filter: saturate(.2);
+    font-size: 1.2rem;
+  }
+  
+  .delete-icon {
+    color: #000; 
+  }
+  
+  .card .edit:hover, .delete-icon:hover {
+    cursor: pointer;
+    color: white;
+    filter: saturate(1);
+  }
+  
+  .note-header, .date, .card-footer, .app-main-note-preview-home 
+  {
+    margin: 1em;
+  }
+  
+  .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.2rem;
+  }
+
+
+
+/* NOTE EDITOR/PREVIEW (MAIN) STYLES */
+
+.app-main {
+  margin-bottom: 2rem;
+}
+
+  .app-main form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 1em;
+    gap: 1rem
+  }
+
+  .input-fields, .preview-and-save {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    
+  }
+
+  .app-main-note-preview-home a, .app-main-note-preview a {
+    color: orangered;
+  }
+
+  .app-main button, 
+  .input-fields input, .input-fields textarea,
+  .preview-and-save input, .preview-and-save textarea,
+  .app-main-note-preview {
+    padding: .5em;
+    width: 44vw;
+  }
+
+  .app-main-note-preview, .input-fields textarea,
+  .preview-and-save input,
+  .preview-and-save textarea {
+    height: 70vh;
+    resize: none;
+  }
+
+
+  .input-fields input, .app-main button {
+    height: 4rem;
+  }
+
+  .app-main button {
+    text-transform: uppercase;
+    background: none;
+    border: 3px solid #ccc;
+    outline: none;
+  }
+
+  .app-main button:hover {
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+
+
+  .input-fields input,
+  .input-fields textarea,
+  .preview-and-save input,
+  .preview-and-save textarea, 
+  .app-main-note-preview {
+    padding: 1.2em 2em;
+    border: 3px solid #ccc;
+    outline: none;
+  }
+
+  .input-fields input:focus,
+  .input-fields textarea:focus,
+  .preview-and-save input:focus,
+  .preview-and-save textarea:focus,
+  .app-main button:hover,
+  .input-fields input:active,
+  .input-fields textarea:active,
+  .preview-and-save input:active,
+  .preview-and-save textarea:active,
+  .app-main button:focus,
+  .app-main-note-preview:active,
+  .app-main-note-preview:focus {
+    border: 3px solid #555;
+  }
+
+  /* Notes page settings the notes */
+
+  .note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+  .note-header h4 {
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+  }
+
+  .card-footer a {
+    color: black;
+  }
+  
+  .note-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 2em;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center;
+    margin: 0 3em;
+  }
+  
+  .card {
+      box-shadow: 0 0 .5rem rgb(7, 25, 63);
+      background: var(--card-background);
+      padding: 1em;
+      white-space: pre-wrap;
+      border-radius: .5rem;
+      color: white;
+  }
+
+
+  /* React Markdown Preview settings */
+
+  .app-main-note-preview-home{
+    white-space: pre-wrap;
+    /* max-height: 40rem; */
+    height: 30rem;
+    overflow-y: scroll;
+    background: rgb(255, 247, 247);
+    color: black;
+    padding: .5rem;
+    border-radius: .5rem;
+  }
+
+  .app-main-note-preview, .app-main-note-preview-home {
+    border: 1px solid black;
+    overflow: hidden;
+    overflow-y: scroll;
+    color: black;
+    padding: 1.2rem 1rem;
+    white-space: pre-wrap;
+  }
+
+  .app-main-note-preview li, .app-main-note-preview-home li {
+    margin-left: 1.6rem;
+  }
+
+  .app-main-note-preview code,
+  .app-main-note-preview-home code{
+    color: #D34E24;
+  }
+
+  .app-main-note-preview a,
+  .app-main-note-preview-home a{
+    color: limegreen;
+  }
+
+  .app-main-note-preview a:hover, 
+  .app-main-note-preview-home a:hover{
+    color: darkgreen;
+  }
+  
+  @media (max-width: 520px){
+    .app-main button, 
+    .input-fields input, .input-fields textarea,
+    .preview-and-save input, .preview-and-save textarea,
+    .app-main-note-preview {
+      width: 80vw;
+    } 
+    .input-fields textarea,
+    .preview-and-save textarea,
+    .app-main-note-preview {
+      height: 28vh;
+    }
+
+
+    }
+
+
+    

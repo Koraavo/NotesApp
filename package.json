@@ -1,0 +1,17 @@
+{
+  "name": "mern-note-taking-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vite.config.js",
+  "homepage": "https://gitname.github.io/Note-Taking-App",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}

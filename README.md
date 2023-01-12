@@ -1,5 +1,8 @@
 Project: Notes
 
+![notes-app-image](https://user-images.githubusercontent.com/58638514/212125195-95fcfc97-8ee7-4c13-a860-d492a0902b18.png)
+
+
 Introduction:
 This is the code repository for the java and web development course application requirement. The application is called Notes. It is a simple notes application with markdown possibilities.
 

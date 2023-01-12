@@ -39,7 +39,7 @@ Information about Vite can be read here
 To run the server, first go to the server folder and run `npm install` to install all the dependencies
 To run the client(frontend), go to the client folder and run `npm install` to install all the dependencies
 Once the dependencies are installed and the env files have been created, you can type
-`npm run dev`
+`npm run dev` on the server and the client folder.
 This will make an attempt to connect to the server and the client.
 
 Once both the client and the server are connected, you can test the application by registering on the application and creating your first note.

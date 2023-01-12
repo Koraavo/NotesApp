@@ -1,9 +1,9 @@
-Project: Notes
+# Project: Notes
 
 ![notes-app-image](https://user-images.githubusercontent.com/58638514/212125195-95fcfc97-8ee7-4c13-a860-d492a0902b18.png)
 
 
-Introduction:
+## Introduction:
 This is the code repository for the java and web development course application requirement. The application is called Notes. It is a simple notes application with markdown possibilities.
 
 The user needs to register himself and can then create his private notes.
@@ -14,7 +14,7 @@ The Application is built using the MERN Stack. MERN is an acronym for MongoDB (u
 
 <hr>
 
-Setup
+## Setup
 
 Node js needs to be installed to run the application.
 This can be downloaded from 
@@ -29,7 +29,7 @@ A Secret Token, A port number and the link for the database needs to be saved in
 
 <hr>
 
-Server and Client
+## Server and Client
 
 Both the server and the client have been created using Vite, a lightweight react rapid web development tool.
 

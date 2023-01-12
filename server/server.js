@@ -10,7 +10,7 @@ import userRouter from "./routes/userRouter.js";
 import noteRouter from "./routes/noteRouter.js";
 import cors from "cors";
 // dotenv config needs to be initialised to use dotenv
-dotenv.config();
+dotenv.config({path:"./vars/.env"});
 
 // app is being initialised
 const app = express();
